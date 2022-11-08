@@ -1,0 +1,10 @@
+services:
+  microbin:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - 8012:8080
+    volumes:
+      - /data/docker/microbin:/app/paste_data

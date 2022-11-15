@@ -34,4 +34,5 @@ COPY --from=build \
 # Expose webport used for the webserver to the docker runtime
 EXPOSE 8080
 
-ENTRYPOINT ["microbin"]
+# ENTRYPOINT ["microbin"]
+CMD ["microbin", "--editable", "--enable-burn-after", "--private", "--qr", "--highlightsyntax", "--public-path=\"https://microbin.maxwong.io\""]
